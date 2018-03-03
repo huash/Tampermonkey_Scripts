@@ -8,21 +8,21 @@
 // @grant        none
 // ==/UserScript==
 
-(function() {
+(function () {
     'use strict';
-    var count=20;
-    var hides=function(doms){
-        for(var i=0;i<doms.length;i++){
-            doms[i].style.display='none';
+    var count = 20;
+    var hides = function (doms) {
+        for (var i = 0; i < doms.length; i++) {
+            doms[i].style.display = 'none';
         }
     };
-    var work=function(){
+    var work = function () {
         count--;
-        var doms= document.querySelectorAll('#idle-detail .album .mau-guide');
+        var doms = document.querySelectorAll('#idle-detail .album .mau-guide');
         hides(doms);
         hides(document.querySelectorAll('.download-layer'));
-        if(count>0){
-            setTimeout(work,600);
+        if (count > 0) {
+            setTimeout(work, 600);
         }
     };
     work();
