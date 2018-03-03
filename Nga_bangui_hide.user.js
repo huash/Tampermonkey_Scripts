@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Nga_bangui_hide
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  隐藏nga版规
 // @author       huash
 // @match        *://bbs.ngacn.cc/thread.php?fid=498*
@@ -19,10 +19,9 @@
     var h3 = document.querySelector('#toptopics>.contentBlock>h3');
     var span = document.createElement('span');
     span.className = 'small_colored_text_btn white';
-    span.style = 'float:right';
+    span.style = 'float:right;cursor: pointer;';
     span.innerText = '展开版规';
-    h3.appendChild(span);
-    span.onclick(function () {
+    span.onclick = function () {
         if (ishide) {
             toppedtopic.className = toppedtopic.className.replace(' toppedtopic', '');
             span.innerText = '收起版规';
@@ -31,5 +30,6 @@
             span.innerText = '展开版规';
         }
         ishide = !ishide;
-    });
+    };
+    h3.appendChild(span);
 })();
