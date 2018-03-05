@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Nga_bangui_hide
 // @namespace    http://tampermonkey.net/
-// @version      0.42
+// @version      0.43
 // @description  隐藏nga版规
 // @author       huash
 // @match        *://bbs.ngacn.cc/thread.php*
