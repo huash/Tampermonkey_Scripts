@@ -11,7 +11,7 @@
 (function () {
     'use strict';
     GM_addStyle('.toppedtopic{display:none !important;}');
-    
+    GM_addStyle('.adsc,.adsh{display:none !important;}');
     var toppedtopic = document.getElementById('toppedtopic');
     toppedtopic.className = toppedtopic.className + ' toppedtopic';
     var ishide = true;
@@ -32,4 +32,8 @@
         ishide = !ishide;
     };
     h3.appendChild(span);
+
+    var linkTargetEvent = function () {
+        
+    };
 })();
