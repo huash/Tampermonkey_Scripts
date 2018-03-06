@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Nga_bangui_hide
 // @namespace    http://tampermonkey.net/
-// @version      0.43
-// @description  隐藏nga版规
+// @version      0.50
+// @description  板块列表页默认隐藏nga版规 新窗弹出
 // @author       huash
 // @match        *://bbs.ngacn.cc/thread.php*
 // @grant        GM_addStyle
@@ -34,6 +34,13 @@
     h3.appendChild(span);
 
     var linkTargetEvent = function () {
-        
+        var topicrows = document.getElementById('topicrows');
+        topicrows.onclick = function (e) {
+            var dom = e.target; if (!dom) { return; }
+            if (dom.tagName == 'A' && dom.className.indexOf('topic') >= 0) {
+                dom.target = '_blank';
+            }
+        };
     };
+    linkTargetEvent();
 })();
