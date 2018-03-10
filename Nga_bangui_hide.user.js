@@ -33,6 +33,7 @@
     };
     h3.appendChild(span);
 
+    var lt_dom_label = document.createElement('label');
     var linkTargetEvent = function () {
         var topicrows = document.getElementById('topicrows');
         topicrows.onclick = function (e) {
