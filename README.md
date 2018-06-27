@@ -7,3 +7,5 @@
 2. [咸鱼相关](../../raw/master/clearXianYuMasking.user.js)
 
 3. [Nga论坛相关](../../raw/master/Nga_bangui_hide.user.js)
+
+4. [autohome参数页可复制](../../raw/master/autohome%20span%20--text.user.js)
