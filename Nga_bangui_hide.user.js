@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Nga_bangui_hide
 // @namespace    http://tampermonkey.net/
-// @version      0.70
+// @version      0.71
 // @description  板块列表页默认隐藏nga版规 新窗弹出 左右键翻页
 // @author       huash
 // @match        *://bbs.ngacn.cc/thread.php*
@@ -55,6 +55,10 @@
         var SetPage = function (offset) {
             var url = window.location.href;
             var nowPage = url.match(/page=(\d+)/i);
+            if(!nowPage){//第一页没page
+                if(offset<0){return;}
+                window.location.href=url+'&page='+offset;
+            }
             nowPage = nowPage.length > 1 ? parseInt(nowPage[1]) : 1;
             nowPage += offset;
             if (nowPage <= 0) {
