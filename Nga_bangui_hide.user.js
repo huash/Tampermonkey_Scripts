@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Nga_bangui_hide
 // @namespace    http://tampermonkey.net/
-// @version      0.71
+// @version      0.74
 // @description  板块列表页默认隐藏nga版规 新窗弹出 左右键翻页
 // @author       huash
 // @match        *://bbs.ngacn.cc/thread.php*
@@ -12,7 +12,7 @@
 
 (function () {
     'use strict';
-    GM_addStyle('#mainmenu{margin-bottom: 30px;}');
+    GM_addStyle('#mainmenu{margin-bottom: 30px;}#custombg>div{height:170px;}');
 
     var thread=function(){
         GM_addStyle('.toppedtopic{display:none !important;}');
