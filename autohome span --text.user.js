@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         autohome span ->text
 // @namespace    http://xcabc.com/
-// @version      0.1
+// @version      0.2
 // @description  汽车之家参数处理伪类里面文字
 // @author       huash
-// @match        http://car.autohome.com.cn/config/series/*.html
+// @match        http*://car.autohome.com.cn/config/*
 // @grant        none
 // ==/UserScript==
 
