@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Nga_bangui_hide
 // @namespace    http://tampermonkey.net/
-// @version      0.75
+// @version      0.76
 // @description  板块列表页默认隐藏nga版规 新窗弹出 左右键翻页
 // @author       huash
 // @match        *://bbs.ngacn.cc/thread.php*
@@ -12,7 +12,7 @@
 
 (function () {
     'use strict';
-    GM_addStyle('#mainmenu{margin-bottom: 30px;}#custombg>div{height:170px !important;}');
+    GM_addStyle('#mainmenu{position: absolute;width: 100%;top:0}#custombg>div{height:170px !important;}');
 
     var thread=function(){
         GM_addStyle('.toppedtopic{display:none !important;}');
@@ -57,7 +57,7 @@
             var nowPage = url.match(/page=(\d+)/i);
             if(!nowPage){//第一页没page
                 if(offset<0){return;}
-                window.location.href=url+'&page='+offset;
+                window.location.href=url+'&page=2';return;
             }
             nowPage = nowPage.length > 1 ? parseInt(nowPage[1]) : 1;
             nowPage += offset;
