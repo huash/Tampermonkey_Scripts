@@ -41,7 +41,7 @@
     
         var lt_dom_label = document.createElement('label');
         var linkTargetEvent = function () {
-            var topicList=document.querySelectorAll('#topicrows .topic');
+            var topicList=document.querySelectorAll('#topicrows .topic,#pagebbtm .stdbtn .uitxt1');
             for(var i=0;i<topicList.length;i++){
                 topicList[i]._useloadread=0;
             }
